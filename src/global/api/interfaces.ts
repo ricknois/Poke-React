@@ -32,7 +32,7 @@ export interface IPokemon {
   weight: number;
 }
 
-interface Ability {
+export interface Ability {
   ability: Species;
   is_hidden: boolean;
   slot: number;
@@ -74,7 +74,7 @@ interface PastType {
   types: Type[];
 }
 
-interface Type {
+export interface Type {
   slot: number;
   type: Species;
 }
@@ -195,7 +195,7 @@ interface OfficialArtwork {
   front_default: string;
 }
 
-interface Stat {
+export interface Stat {
   base_stat: number;
   effort: number;
   stat: Species;

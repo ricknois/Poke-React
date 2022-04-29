@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
-export const theme = extendTheme({
+export const themes = {
   colors: {
     pokeType: {
       rock: "#B69E31",
@@ -33,4 +33,6 @@ export const theme = extendTheme({
       textPopp: "Poppins, sans-serif",
     },
   },
-});
+};
+
+export const theme = extendTheme(themes);
