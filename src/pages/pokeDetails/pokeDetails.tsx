@@ -6,6 +6,7 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import PokeballSvg from "../../global/assets/PokeballSvg";
 import Types from "./components/Types";
 import About from "./components/About";
+import Stats from "./components/Stats";
 
 export default function PokeDetails() {
   const params = useParams();
@@ -103,13 +104,6 @@ export default function PokeDetails() {
         mb="4px"
         borderRadius="lg"
       >
-        {/* <About
-          types={pokeData.types}
-          height={pokeData.height}
-          weight={pokeData.weight}
-          abilities={pokeData.abilities}
-          stats={pokeData.stats}
-        /> */}
         <Types types={pokeData.types} />
         <About
           weight={pokeData.weight}
@@ -117,6 +111,7 @@ export default function PokeDetails() {
           abilities={pokeData.abilities}
           color={color}
         />
+        <Stats stats={pokeData.stats} color={color} />
       </Flex>
     </Flex>
   );

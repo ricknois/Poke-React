@@ -19,7 +19,7 @@ export const themes = {
       dark: "#75574C",
       fairy: "#E69EAC",
       fire: "#F57D31",
-      eletric: "#F9CF30",
+      electric: "#F9CF30",
       dragon: "#7037FF",
     },
     grayScale: {

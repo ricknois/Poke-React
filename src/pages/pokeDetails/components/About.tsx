@@ -34,7 +34,7 @@ export default function About({ weight, height, abilities, color }: Props) {
         <Box h="full" bgColor="gray.300" paddingX="1px"></Box>
         <Info info={height} title={"Height"} icon={HeightIcon} />
         <Box h="full" bgColor="gray.300" paddingX="1px"></Box>
-        <Info info={abilities} title={"Height"} />
+        <Info info={abilities} title={"Moves"} />
       </Flex>
       <Text
         color="grayScale.dgray"
