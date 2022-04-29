@@ -1,11 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import Home from "./pages/home/home";
+import Router from "./global/routes/router";
 import { theme } from "./global/theme";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Home />
+      <Router />
     </ChakraProvider>
   );
 }
