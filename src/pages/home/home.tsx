@@ -5,6 +5,7 @@ import {
   IPokemon,
 } from "../../global/api/interfaces";
 import { Pokemon } from "./components";
+import Header from "./components/Header/Header";
 
 export default function Home() {
   const [pokeData, setPokeData] = useState<IPokemon[]>([]);
@@ -54,6 +55,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header />
       {loading ? (
         <span>loading...</span>
       ) : (
