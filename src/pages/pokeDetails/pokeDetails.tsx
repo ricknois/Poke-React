@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { IPokemon } from "../../global/api/interfaces";
 import { Flex, IconButton, Image, Text } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
@@ -53,12 +53,14 @@ export default function PokeDetails() {
           h="32px"
           zIndex="10"
         >
-          <IconButton
-            aria-label="Go back to home"
-            variant="unstyled"
-            color="white"
-            icon={<ArrowBackIcon w="24px" h="32px" />}
-          />
+          <Link to={"/"}>
+            <IconButton
+              aria-label="Go back to home"
+              variant="unstyled"
+              color="white"
+              icon={<ArrowBackIcon w="24px" h="32px" />}
+            />
+          </Link>
           <Text
             fontFamily="Poppins"
             fontWeight="bold"
