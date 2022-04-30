@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../../pages/home/home";
-import PokeDetails from "../../pages/pokeDetails/pokeDetails";
+import Home from "../../Pages/Home/Home";
+import PokeDetails from "../../Pages/PokeDetails/PokeDetails";
 
 export default function Router() {
   return (

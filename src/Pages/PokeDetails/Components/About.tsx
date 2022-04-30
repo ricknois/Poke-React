@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { Ability } from "../../../global/api/interfaces";
 import WeightIcon from "../../../global/assets/Weight.png";
 import HeightIcon from "../../../global/assets/Height.png";
-import Info from "./Info";
+import Info from "../../Components/Info";
 
 type Props = {
   height: number;

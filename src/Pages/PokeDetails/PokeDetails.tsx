@@ -4,9 +4,9 @@ import { IPokemon } from "../../global/api/interfaces";
 import { Flex, IconButton, Image, Text } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import PokeballSvg from "../../global/assets/PokeballSvg";
-import Types from "./components/Types";
-import About from "./components/About";
-import Stats from "./components/Stats";
+import Types from "./Components/Types";
+import About from "./Components/About";
+import Stats from "./Components/Stats";
 
 export default function PokeDetails() {
   const params = useParams();

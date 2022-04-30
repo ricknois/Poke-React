@@ -4,8 +4,8 @@ import {
   IApiResources,
   IPokemon,
 } from "../../global/api/interfaces";
-import { Pokemon } from "./components";
-import Header from "./components/Header/Header";
+import { Pokemon } from "./Components";
+import Header from "./Components/Header/Header";
 import { Flex } from "@chakra-ui/react";
 
 export default function Home() {

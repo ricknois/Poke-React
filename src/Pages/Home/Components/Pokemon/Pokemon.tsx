@@ -1,7 +1,7 @@
 import { Flex, Text, Image, Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-import Info from "../../../pokeDetails/components/Info";
+import Info from "../../../Components/Info";
 import WeightIcon from "../../../../global/assets/Weight.png";
 import HeightIcon from "../../../../global/assets/Height.png";
 import { Ability } from "../../../../global/api/interfaces";
