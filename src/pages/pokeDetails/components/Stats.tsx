@@ -17,7 +17,7 @@ const dictionary: any = {
 
 export default function Stats({ stats, color }: Props) {
   return (
-    <Flex flexDirection="column" w="full" mt="16px " paddingX="25px">
+    <Flex flexDirection="column" w="full" mt="16pxs">
       <Text
         color={`pokeType.${color}`}
         fontFamily="Poppins"
@@ -28,19 +28,19 @@ export default function Stats({ stats, color }: Props) {
       >
         Base Stats
       </Text>
-      <Stack spacing={0.5}>
+      <Stack spacing={0.5} marginX={["7%", "7%", "10%"]}>
         {stats.map((stat) => (
-          <Flex alignItems="center">
+          <Flex alignItems="center " justifyContent="center">
             <Text
               color={`pokeType.${color}`}
               fontSize="10px"
               fontFamily="Poppins"
               fontWeight="bold"
-              w="8%"
+              w={["8%", "8%", "4%"]}
             >
               {dictionary[stat.stat.name]}
             </Text>
-            <Text fontSize="10px" fontFamily="Poppins" w="8%">
+            <Text fontSize="10px" fontFamily="Poppins" w={["8%", "8%", "4%"]}>
               {`${("000" + stat.base_stat).slice(-3)}`}
             </Text>
             <Progress
@@ -48,7 +48,7 @@ export default function Stats({ stats, color }: Props) {
               size="xs"
               value={stat.base_stat}
               max={200}
-              w="84%"
+              w={["84%", "84%", "50%"]}
             />
           </Flex>
         ))}

@@ -87,20 +87,20 @@ export default function PokeDetails() {
         top="0"
         w="100%"
         justifyContent="center"
-        mt="30px"
+        mt={["30px", "30px", "-10px"]}
       >
         <Image
           src={pokeData.sprites?.front_default}
-          alt={`${name} photo`}
-          h="300px"
-          w="300px"
+          alt={`${pokeData.name} photo`}
+          h={["300px", "300px", "200px"]}
+          w={["300px", "300px", "200px"]}
         />
       </Flex>
       <Flex
         flexDirection="column"
         bgColor="white"
         h="100%"
-        mt="150px"
+        mt={["150px", "150px", "40px"]}
         mr="4px"
         ml="4px"
         mb="4px"
