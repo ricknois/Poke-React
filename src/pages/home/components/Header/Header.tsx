@@ -34,7 +34,12 @@ export default function Header() {
             children={<SearchIcon color="gray.300" />}
           />
 
-          <Input variant="outline" placeholder="Search" borderRadius="md" />
+          <Input
+            variant="filled"
+            bgColor="white"
+            placeholder="Search"
+            borderRadius="md"
+          />
         </InputGroup>
       </Flex>
     </Flex>

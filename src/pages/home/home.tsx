@@ -6,6 +6,7 @@ import {
 } from "../../global/api/interfaces";
 import { Pokemon } from "./components";
 import Header from "./components/Header/Header";
+import { Flex } from "@chakra-ui/react";
 
 export default function Home() {
   const [pokeData, setPokeData] = useState<IPokemon[]>([]);
@@ -15,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     const ENDPOINT = "https://pokeapi.co/api/v2/pokemon/";
-    const URL_CONFIGURED = `${ENDPOINT}?offset=${currentPage}&limit=${10}`;
+    const URL_CONFIGURED = `${ENDPOINT}?offset=${currentPage}&limit=${6}`;
     fetch(URL_CONFIGURED)
       .then((response) => response.json())
       .then((newPokemons: IApiResourcesList) => {
@@ -31,14 +32,13 @@ export default function Home() {
     };
     const observer = new IntersectionObserver((entities) => {
       const target = entities[0];
-
       if (target.isIntersecting) {
-        setCurrentPage((old) => old + 10);
+        setCurrentPage((old) => old + 6);
       }
     }, options);
-
     if (loadMoreRef.current) {
       observer.observe(loadMoreRef.current);
+      console.log(loadMoreRef);
     }
   }, []);
 
@@ -54,13 +54,17 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <Flex flexDirection="column" h="calc(100vh)" bgColor="grayScale.lgray">
       <Header />
       {loading ? (
         <span>loading...</span>
       ) : (
-        <div>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <Flex flexDirection="column">
+          <Flex
+            flexWrap="wrap"
+            justifyContent="space-around"
+            bgColor="grayScale.lgray"
+          >
             {pokeData.map((pokemon, index) => (
               <Pokemon
                 key={index}
@@ -68,12 +72,15 @@ export default function Home() {
                 imgUrl={pokemon.sprites.front_default}
                 id={pokemon.id}
                 type={pokemon.types[0].type.name}
+                height={pokemon.height}
+                weight={pokemon.weight}
+                abilities={pokemon.abilities}
               />
             ))}
-          </div>
-          <div ref={loadMoreRef}></div>
-        </div>
+          </Flex>
+        </Flex>
       )}
-    </div>
+      <Flex ref={loadMoreRef}>oiii</Flex>
+    </Flex>
   );
 }
